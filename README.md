@@ -62,3 +62,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Cuatro en línea online.
+
+En este proyecto, junto con mis compañeros de 6to año Informática del Politecnico Rosario, vamos dar función al juego "Cuatro en Linea" en un servidor web. Este proyecto es llevado a cabo en la materia AAT.
+
+## Como adaptar nuestro proyecto a un entorno con Laravel
+ 
+ ###Prerrequisitos
+ - **Docker
+
