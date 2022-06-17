@@ -8,111 +8,111 @@
 </p>
 
 # Cuatro en línea online.
-    En este proyecto, junto con mis compañeros de 6to año Informática del Politecnico Rosario, vamos dar función al juego "Cuatro en Linea" en un servidor web. Este proyecto es llevado a cabo en la materia AAT.
+   En este proyecto, junto con mis compañeros de 6to año Informática del Politecnico Rosario, vamos dar función al juego "Cuatro en Linea" en un servidor web. Este proyecto es llevado a cabo en la materia AAT.
 
 <br/>
 
 # Como adaptar nuestro proyecto a un entorno con Laravel
-    ## Prerrequisitos
-        Para comenzar con la configuracion, debemos instalar los siguientes softwares, lo podemos realizar desde los links a continuacion:
+   ## Prerrequisitos
+   Para comenzar con la configuracion, debemos instalar los siguientes softwares, lo podemos realizar desde los links a continuacion:
     - DDEV (https://ddev.readthedocs.io/en/stable/)
     - Docker (https://docs.docker.com/desktop/) 
     - Composer (https://getcomposer.org/download/)
 
-    Para que no queden dudas sobre la instalacion de estas herramientas, proporciono links a videos que pueden ser de ayuda :)
+   Para que no queden dudas sobre la instalacion de estas herramientas, proporciono links a videos que pueden ser de ayuda :)
         - Docker (https://www.youtube.com/watch?v=6idFknRIOp4)
         - Composer (https://www.youtube.com/watch?v=tpihb48mTyA)
 
-    ## Configuración
-        Una vez instaladas todas las herramientas, procederemos a su configuración.
+   ## Configuración
+   Una vez instaladas todas las herramientas, procederemos a su configuración.
 
 <br/>
 
-    ## Instrucciones
+   ## Instrucciones
 
-    ### Descargar el repositorio en el directorio local de nuestra PC:
-        Para esto debemos ejecutar este comando en la consola: 
+   ### Descargar el repositorio en el directorio local de nuestra PC:
+   Para esto debemos ejecutar este comando en la consola: 
         
-        >``git clone https://github.com/lautaronestares/cuatroenlinea.git``
+   > ``git clone https://github.com/lautaronestares/cuatroenlinea.git``
 
 <br/>
 
-    ### Configuracion de Docker:
-        Debemos ejecutar >``Docker Desktop`` y una vez dentro debemos dirigirnos al directorio en el cual clonamos el proyecto.
+   ### Configuracion de Docker:
+   Debemos ejecutar > ``Docker Desktop`` y una vez dentro debemos dirigirnos al directorio en el cual clonamos el proyecto.
         
-        La primer orden que debemos escribir en consola es la de 
+   La primer orden que debemos escribir en consola es la de 
         
-        >``ddev config``
+   > ``ddev config``
         
-        Este comando sirve para configurar el contenedor propio de Docker en el cual vamos a estar trabajando.
+   Este comando sirve para configurar el contenedor propio de Docker en el cual vamos a estar trabajando.
         El terminal nos pedirá un nombre para nuestro proyecto y una raiz para guardarlo, los cuales podemos dejar por defecto.
         También nos pedirá especificar el tipo del proyecto, el cual debemos indicar como laravel.
     
-        Una vez terminada esta pequeña configuracion lo iniciaremos introduciendo el comando:
+   Una vez terminada esta pequeña configuracion lo iniciaremos introduciendo el comando:
         
-        >``ddev start``
+   >``ddev start``
 
 <br/>
 
-    ### Inclusion de Composer:
-        Composer es un gestor de dependencias de php, el cual necesitampos para nuestro código.
+   ### Inclusion de Composer:
+   Composer es un gestor de dependencias de php, el cual necesitampos para nuestro código.
         
-        Debemos conectarnos al servidor local con el siguiente comando:
+   Debemos conectarnos al servidor local con el siguiente comando:
         
-        >``ddev ssh``
+   >``ddev ssh``
         
-        Una vez que verificamos que todo está en orden, vamos a actualizar el programa:
+   Una vez que verificamos que todo está en orden, vamos a actualizar el programa:
         
-        >``composer update``
+   > ``composer update``
 
 <br/>
 
-    ### Crear archivo de ambiente
-        Debemos crear un archivo de ambiente para el proyecto. Esto lo realizaremos con los comandos:
+  ### Crear archivo de ambiente
+   Debemos crear un archivo de ambiente para el proyecto. Esto lo realizaremos con los comandos:
         
-        >``ls -la``
+   >``ls -la``
         
-        >``cp .env example . env``
+   >``cp .env example . env``
        
-       <br/>
+   <br/>
 
-    ### Clave
-        Vamos a crear una clave de aplicación para nuestro proyecto.
-        Para hacerlo introduciremos el comando:
+  ### Clave
+   Vamos a crear una clave de aplicación para nuestro proyecto.
+   Para hacerlo introduciremos el comando:
         
-        >``php artisan key:generate``
+   >``php artisan key:generate``
 
 <br/>
 
-    ### Pasos finales
-        Si pasamos todos estos retos sin errores estamos en la recta final.
-        Primero debemos salir del local host con el comando 
+  ### Pasos finales
+   Si pasamos todos estos retos sin errores estamos en la recta final.
+   Primero debemos salir del local host con el comando 
         
-        >``exit``
+   >``exit``
         
-        y reiniciar el proyecto de ddev con:
+   y reiniciar el proyecto de ddev con:
         
-        >``ddev restart``
+   >``ddev restart``
         
-        Ahora la consola nos debería soltar un montón de información y entre esas lineas va a aparecer un link a la pagina web en donde podemos probar el proyecto.
+   Ahora la consola nos debería soltar un montón de información y entre esas lineas va a aparecer un link a la pagina web en donde podemos probar el proyecto.
         
-        Notamos que al abrir el link en el navegador nos saldrá el home de laravel.
+   Notamos que al abrir el link en el navegador nos saldrá el home de laravel.
         
-        Tenemos que agregar al final del link >``/jugar/1`` para poder ingresar al cuatro en linea.
+   Tenemos que agregar al final del link >``/jugar/1`` para poder ingresar al cuatro en linea.
         
-    ### Cerrar los contenedores
-        Mientras realizamos todas estas configuraciones hay contenedores abiertos los cuales debemos cerrar manualmente si dejamos de editar el proyecto ya que estos procesos harán más lento el comportamiento de nuestra computadora.
+  ### Cerrar los contenedores
+   Mientras realizamos todas estas configuraciones hay contenedores abiertos los cuales debemos cerrar manualmente si dejamos de editar el proyecto ya que estos procesos harán más lento el comportamiento de nuestra computadora.
         
-        Para ello lo único que debemos hacer es:
+   Para ello lo único que debemos hacer es:
         
-        >``ddev poweroff``
+   >``ddev poweroff``
         
-        <br/>
+   <br/>
 
         
  ## Volver a ingresar
-    Para volver a ingresar a la página, teniendo todo configurado como hicimos anteriormente, solo debemos introducir el siguiente comando en el directorio del proyecto:
-    >``ddev start``
+   Para volver a ingresar a la página, teniendo todo configurado como hicimos anteriormente, solo debemos introducir el siguiente comando en el directorio del proyecto:
+   >``ddev start``
         
         
     
